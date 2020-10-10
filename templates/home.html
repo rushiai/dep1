@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Prediction Form</title>
+</head>
+<body>
+    <h2>Income Prediction Form</h2>
+    <div>
+        <form action={{url_for("result")}},method="POST">
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age">
+        <br>
+        <label for="w_class">Working Class</label>
+        <select id="w_class" name="w_class">
+            <option value="0">Federal-gov</option>
+            <option value="1">Local-gov</option>
+            <option value="2">Never-worked</option>
+            <option value="3">Private</option>
+            <option value="4">Self-emp-inc</option>
+            <option value="5">Self-emp-not-inc</option>
+            <option value="6">State-gov</option>
+            <option value="7">Without-pay</option>
+        </select>
+        <br>
+        <label for="edu">Education</label>
+        <select name="edu" id="edu">
+            <option value="3">1st - 4th</option>
+            <option value="4">5th - 6th</option>
+            <option value="5">7th - 8th</option>
+            <option value="0">10th</option>
+            <option value="1">11th</option>
+            <option value="2">12th</option>
+            <option value="11">HS-grad</option>
+            <option value="12">Masters</option>
+            <option value="14">Prof-school</option>
+        </select>
+        <br>
+        <label for="gender">gender</label>
+        <select name="gender" id="gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        <br>
+        <label for="marital">marital-status</label>
+        <select name="marital" id="marital">
+            <option value="1">Married</option>
+            <option value="2">Not Mrried</option>
+            <option value="0">Divorse</option>
+        </select>
+        <br>
+        <label for="hours_per_week">Hours per Week </label> 
+        <input type="text" id="hours_per_week" name="hours_per_week">btw:[1-99] 
+    <br> 
+        <input type="submit" value="submit">
+        </form>
+    </div>
+    {{prediction_text}}
+</body>
+</html>
